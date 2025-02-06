@@ -27,46 +27,81 @@
     </style>
 </head>
 
-<body class=" bg-cover bg-center bg-fixed h-screen w-full bg-[url('img/pexels-ingniostudio-665214.jpg')]">
-    <div class="border border-white shadow-xl px-5 py-1 flex items-center justify-between">
-        <div class="flex space-x-6 text-lg p-4">
-            <img src="img/coding.png" class="h-10 w-10" alt="">
-            <span class="flex items-center space-x-2 text-gray-300">
-            <img src="img/marker.png" class="h-5 w-5" alt=""> <span>Home</span>
-            </span>
-            <span class="flex items-center space-x-2 text-gray-300">
-            <img src="img/marker.png" class="h-5 w-5" alt=""> <span>About</span>
-            </span>
-            <span class="flex items-center space-x-2 text-gray-300">
-              <img src="img/marker.png" class="h-5 w-5" alt="">
-              <a href="resume.html">
-                 <span>Resume</span>
-            </a>
-            </span>
-        </div>
-        <span class="flex items-center">
-        <img src="img/link.png" class="h-5 w-5" alt="">
-    </span>
-    </div>
+<body class=" bg-cover bg-center bg-fixed h-auto w-full bg-[url('img/pexels-ingniostudio-665214.jpg')]">
+    <header class="border border-white shadow-xl px-5 py-3 bg-black">
+        <div class="flex justify-between items-center">
 
-    <section class="mt-25 pl-80 pr-80 h-screen ">
-        <img class="mx-auto border-3 border-white rounded-full h-60 w-60" src="img/WhatsApp Image 2025-01-27 at 1.16.38 PM (1).jpeg" alt="">
-        <h1 class="animate-bounce  mt-20 text-3xl  text-center text-gray-300 font-quicksand">
-            HI ! I AM ADITYA CHANDRAKAR🙏🏻
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="img/coding.png" class="h-10 w-10" alt="Logo">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-lg text-gray-300">
+                <a href="#" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>Home</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>About</span>
+                </a>
+                <a href="resume.html" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>Resume</span>
+                </a>
+            </nav>
+
+            <!-- Social Link Icon -->
+            <span class="hidden md:flex items-center">
+            <img src="img/link.png" class="h-5 w-5" alt="Social Link">
+        </span>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white">
+            <img src="img/link.png" class="h-6 w-6" alt="Menu">
+        </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden flex flex-col mt-4 space-y-3 md:hidden text-center text-gray-300">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <a href="#" class="hover:text-white transition">About</a>
+            <a href="resume.html" class="hover:text-white transition">Resume</a>
+        </nav>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <section class="mt-16 px-4 lg:px-80 h-auto text-gray-300 text-center">
+        <!-- Profile Image -->
+        <img class="mx-auto border-4 border-white rounded-full h-48 w-48 md:h-60 md:w-60 object-cover shadow-lg" src="img/WhatsApp Image 2025-01-27 at 1.16.38 PM (1).jpeg" alt="Aditya Chandrakar">
+
+        <!-- Heading -->
+        <h1 class="animate-bounce mt-10 text-2xl md:text-3xl font-quicksand">
+            HI! I AM ADITYA CHANDRAKAR 🙏🏻
         </h1>
-        <p class="sm:p-4  pt-10 mt-10 text-xl font-indie-flower-regular text-gray-300  text-center">
-            Welcome to My Webpage! 🚀 Crafting sleek, efficient, and user-friendly web experiences with a touch of innovation. "Why do developers prefer dark mode? Because light attracts bugs! 😆" Dive in, explore, and enjoy the journey! 🎉</p>
+
+        <!-- Intro Text -->
+        <p class="px-4 sm:px-10 pt-6 mt-4 sm:mb-30 text-lg md:text-xl font-indie-flower">
+            Welcome to My Webpage! 🚀 Crafting sleek, efficient, and user-friendly web experiences with a touch of innovation.
+            <br> <br> "Why do developers prefer dark mode? Because light attracts bugs! 😆"
+            <br> <br> Dive in, explore, and enjoy the journey! 🎉
+        </p>
     </section>
-    <section class="h-screen">
-        <h1 class="shadow text-gray-300 text-3xl text-center animate-pulse font-quicksand">
+    <section class="h-auto mt-30">
+        <h1 class="shadow text-gray-300 lg:mt-50 sm:mt-50 text-3xl text-center animate-pulse font-quicksand">
             PROJECTS
         </h1>
-        <div class="grid grid-cols-3 gap-5 mt-30 p-20">
+        <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-5 mt-30 lg:p-20 sm:lg-2">
 
-            <div class=" item border-2 p-10 border-white text-gray-300  rounded-md shadow-lg ">
+            <div class=" item border-2 lg:p-10 sm:p-5 border-white text-gray-300  rounded-md shadow-lg ">
 
                 <span class="text-xl">➕🏫</span>
-                <h3 class="text-xl mt-3 underline dash">Mentor</h3>
+                <h3 class="text-xl sm:lp-3 mt-3 underline dash">Mentor</h3>
                 <ul class="p-3">
                     <li><strong>Web platform for coaching</strong></li>
                     <li><strong>Teacher & student registrations</strong></li>
@@ -76,7 +111,7 @@
                 </ul>
             </div>
 
-            <div class="item border-2 p-10 border-white text-gray-300  rounded-md shadow-lg ">
+            <div class="item border-2 sm:p-5 lg:p-10 border-white text-gray-300  rounded-md shadow-lg ">
 
                 <span class="text-xl ">➕🧑🏻‍⚕️</span>
                 <h3 class="text-xl mt-3 underline dash">SNB</h3>
@@ -88,7 +123,7 @@
                     <li><strong>Staff scheduling & planning</strong></li>
                 </ul>
             </div>
-            <div class="item border-2 p-10 border-white text-gray-300  rounded-md shadow-lg ">
+            <div class="item border-2  sm:p-5 lg:p-10 border-white text-gray-300  rounded-md shadow-lg ">
                 <span class="text-xl">➕📱</span>
                 <h3 class="text-xl mt-4 underline dash">MOBILE REPAIR</h3>
                 <ul class="p-3">
@@ -101,72 +136,56 @@
             </div>
         </div>
     </section>
-    <section class="h-screen p-10">
-        <h3 class="animate-pulse text-3xl text-gray-300 text-center font-quicksand">SKILLS</h3>
-        <div class="grid grid-cols-5 gap-8">
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/c.svg" alt="">
+    <section class="h-auto py-10">
+        <h3 class="animate-pulse text-3xl text-gray-300 mb-30 text-center font-quicksand mb-6">SKILLS</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 md:px-10 lg:px-20">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/c.svg" alt="C">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img//c (1).svg" alt="">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/c (1).svg" alt="C++">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/html.svg" alt="">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/html.svg" alt="HTML">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/java.svg" alt="">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/java.svg" alt="Java">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/js.svg" alt="">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/js.svg" alt="JavaScript">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/laravel.png" alt="">
 
-                </div>
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/laravel.png" alt="Laravel">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/mongo-db.png" alt="">
-                </div>
+
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/mongo-db.png" alt="MongoDB">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/mysql.png" alt="">
-                </div>
+
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/mysql.png" alt="MySQL">
             </div>
-            <div class="text-gray-300  mt-20">
-                <div class="font-quicksand p-5 ">
-                    <img class="h-40 w-40" src="img/node-js.svg" alt="">
-                </div>
+
+            <div class="flex justify-center items-center">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/node-js.svg" alt="Node.js">
             </div>
 
         </div>
     </section>
-    <section class="h-screen">
-        <h3 class="p-4 mt-10 text-gray-300 text-center animate-pulse text-3xl"> WORK EXPERIENCE</h3>
-        <div class="grid grid-cols-2 gap-5 mt-30 p-20">
+    <section class="h-auto py-10">
+        <h3 class="p-4 text-gray-300 mt-10 mb-20 text-center animate-pulse text-3xl"> WORK EXPERIENCE</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 md:px-10 lg:px-20 mt-10">
 
-            <div class=" item border-2 p-10 border-white text-gray-300  rounded-md shadow-lg ">
-
+            <div class="border-2 p-6  md:p-10 border-white text-gray-300 rounded-md shadow-lg">
                 <span class="text-2xl underline">DISYMS</span>
-                <h3 class="text-sm mt-3 underline dash">WEB DEVELOPER INTERN</h3>
-                <ul class="p-3">
+                <h3 class="text-sm mt-3 underline">WEB DEVELOPER INTERN</h3>
+                <ul class="p-3 space-y-2">
                     <li><strong>Collaborated with cross-functional teams to enhance UI/UX</strong></li>
                     <li><strong>Improved web app design & functionality for better usability</strong></li>
                     <li><strong>Developed modern web designs using latest technologies</strong></li>
@@ -174,13 +193,13 @@
                     <li><strong>Implemented payment gateways & location-based services</strong></li>
                     <li><strong>Performed cross-browser testing, debugging & documentation</strong></li>
                 </ul>
-                <p>FROM: FEB-2024 TO MAY-2024</p>
+                <p class="mt-2">FROM: FEB-2024 TO MAY-2024</p>
             </div>
-            <div class=" item border-2 p-10 border-white text-gray-300  rounded-md shadow-lg ">
 
+            <div class="border-2 p-6 md:p-10 border-white text-gray-300 rounded-md shadow-lg">
                 <span class="text-2xl underline">THE KARMA WEB</span>
-                <h3 class="text-sm mt-3 underline dash">WEB DEVELOPER INTERN</h3>
-                <ul class="p-3">
+                <h3 class="text-sm mt-3 underline">WEB DEVELOPER INTERN</h3>
+                <ul class="p-3 space-y-2">
                     <li><strong>Designed interactive and visually appealing UI/UX</strong></li>
                     <li><strong>Utilized modern front-end frameworks & libraries</strong></li>
                     <li><strong>Optimized websites with lazy loading & compression</strong></li>
@@ -188,12 +207,12 @@
                     <li><strong>Brainstormed innovative solutions with the team</strong></li>
                     <li><strong>Conducted code reviews & client presentations</strong></li>
                 </ul>
-                <p>FROM: JULY-2024 TO OCT-2024</p>
+                <p class="mt-2">FROM: JULY-2024 TO OCT-2024</p>
             </div>
 
         </div>
-
     </section>
+
     <footer>
         <p class=" mb-10 mt-10 text-center text-gray-300">Made With Love and Affection❤️</p>
     </footer>
