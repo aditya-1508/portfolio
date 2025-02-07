@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:opsz,wght@14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- Include AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Include AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <style>
         .font-quicksand {
             font-family: "Quicksand", sans-serif;
@@ -33,7 +39,7 @@
 
             <!-- Logo -->
             <div class="flex items-center space-x-4">
-                <img src="img/coding.png" class="h-10 w-10" alt="Logo">
+                <img src="img/coding.png" class="fade-in h-10 w-10" alt="Logo">
             </div>
 
             <!-- Desktop Navigation -->
@@ -78,15 +84,15 @@
     </script>
     <section class="mt-16 px-4 lg:px-80 h-auto text-gray-300 text-center">
         <!-- Profile Image -->
-        <img class="mx-auto border-4 border-white rounded-full h-48 w-48 md:h-60 md:w-60 object-cover shadow-lg" src="img/WhatsApp Image 2025-01-27 at 1.16.38 PM (1).jpeg" alt="Aditya Chandrakar">
+        <img class="mx-auto border-4 border-white rounded-full h-48 w-48 md:h-60 md:w-60 object-cover shadow-lg" src="img/WhatsApp Image 2025-01-27 at 1.16.38 PM (1).jpeg" alt="Aditya Chandrakar" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
 
         <!-- Heading -->
-        <h1 class="animate-bounce mt-10 text-2xl md:text-3xl font-quicksand">
+        <h1 class="animate-bounce mt-10 text-2xl md:text-3xl font-quicksand" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
             HI! I AM ADITYA CHANDRAKAR 🙏🏻
         </h1>
 
         <!-- Intro Text -->
-        <p class="px-4 sm:px-10 pt-6 mt-4 sm:mb-30 text-lg md:text-xl font-indie-flower">
+        <p class="px-4 sm:px-10 pt-6 mt-4 sm:mb-30 text-lg md:text-xl font-indie-flower" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
             Welcome to My Webpage! 🚀 Crafting sleek, efficient, and user-friendly web experiences with a touch of innovation.
             <br> <br> "Why do developers prefer dark mode? Because light attracts bugs! 😆"
             <br> <br> Dive in, explore, and enjoy the journey! 🎉
@@ -97,7 +103,7 @@
             PROJECTS
         </h1>
 
-        <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 p-5 sm:p-10 lg:p-20 font-quicksand">
+        <div data-aos="fade-up" class="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 p-5 sm:p-10 lg:p-20 font-quicksand">
 
             <div class="item border-2 p-5 sm:p-8 lg:p-10 border-white text-gray-300 rounded-md shadow-lg">
                 <span class="text-xl">➕🏫</span>
@@ -138,53 +144,63 @@
         </div>
     </section>
 
-    <section class="h-auto mt-16 ">
+    <section data-aos="flip-left" class="h-auto mt-16">
         <h3 class="animate-pulse text-3xl text-gray-300 mb-30 text-center font-quicksand mb-30">SKILLS</h3>
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 md:px-10 lg:px-20">
 
-            <div class="flex justify-center items-center">
+            <!-- Add data-aos="flip-left" for each logo -->
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/c.svg" alt="C">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/c (1).svg" alt="C++">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/html.svg" alt="HTML">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/java.svg" alt="Java">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/js.svg" alt="JavaScript">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/laravel.png" alt="Laravel">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/mongo-db.png" alt="MongoDB">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/mysql.png" alt="MySQL">
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center" data-aos="flip-left">
                 <img class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40" src="img/node-js.svg" alt="Node.js">
             </div>
 
         </div>
     </section>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Duration of the animation (ms)
+            once: true, // Animation happens once
+        });
+    </script>
     <section class="h-auto mt-16">
         <h3 class="p-4 text-gray-300 mt-40 mb-30 text-center animate-pulse text-3xl"> WORK EXPERIENCE</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 md:px-10 lg:px-20 mt-10 font-quicksand">
 
-            <div class="border-2 p-6  md:p-10 border-white text-gray-300  rounded-md shadow-lg">
+            <!-- Add data-aos="fade-up" or any other animation -->
+            <div class="border-2 p-6 md:p-10 border-white text-gray-300 rounded-md shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <span class="text-2xl underline">DISYMS</span>
                 <h3 class="text-sm mt-3 underline">WEB DEVELOPER INTERN</h3>
                 <ul class="p-3 space-y-2">
@@ -198,7 +214,8 @@
                 <p class="mt-2">FROM: FEB-2024 TO MAY-2024</p>
             </div>
 
-            <div class="border-2 p-6 md:p-10 border-white text-gray-300 rounded-md shadow-lg">
+            <!-- Apply animation to the second div -->
+            <div class="border-2 p-6 md:p-10 border-white text-gray-300 rounded-md shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <span class="text-2xl underline">THE KARMA WEB</span>
                 <h3 class="text-sm mt-3 underline">WEB DEVELOPER INTERN</h3>
                 <ul class="p-3 space-y-2">
@@ -215,9 +232,18 @@
         </div>
     </section>
 
+
     <footer>
         <p class=" mb-10 mt-10 text-center text-gray-300">Made With Love and Affection❤️</p>
     </footer>
+    <script>
+        // Initialize AOS
+
+        AOS.init({
+            duration: 1000, // Duration of the animation (ms)
+            once: false,
+        });
+    </script>
 
 </body>
 
