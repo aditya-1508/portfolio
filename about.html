@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Personal portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:opsz,wght@14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <style>
+        .font-quicksand {
+            font-family: "Quicksand", sans-serif;
+        }
+        
+        .indie-flower-regular {
+            font-family: "Indie Flower", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .quicksand {
+            font-family: "Quicksand", serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+</head>
+
+<body class=" bg-cover bg-center bg-fixed h-auto w-full bg-[url('img/pexels-ingniostudio-665214.jpg')]">
+    <header class="border border-white shadow-xl px-5 py-3 bg-black">
+        <div class="flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="img/coding.png" class="h-10 w-10" alt="Logo">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-md text-gray-300">
+                <a href="#" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>Home</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>About</span>
+                </a>
+                <a href="resume.html" class="flex items-center space-x-2 hover:text-white transition">
+                    <img src="img/marker.png" class="h-5 w-5" alt=""> <span>Resume</span>
+                </a>
+            </nav>
+
+            <!-- Social Link Icon -->
+            <span class="hidden md:flex items-center">
+            <img src="img/link.png" class="h-5 w-5" alt="Social Link">
+        </span>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white">
+            <img src="img/link.png" class="h-6 w-6" alt="Menu">
+        </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden flex flex-col mt-4 space-y-3 md:hidden text-center text-gray-300">
+            <a href="index.html" class="hover:text-white transition">Home</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
+            <a href="resume.html" class="hover:text-white transition">Resume</a>
+        </nav>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <section class="flex justify-center text-justify items-center backdrop-blur text-gray-300 px-5 sm:px-10 md:px-20">
+        <div class="border-0 border-black shadow-4xl rounded-md p-5 sm:p-10 md:p-20 max-w-4xl">
+
+            <h1 class="text-3xl sm:text-4xl text-center font-quicksand mb-6">
+                ABOUT ME
+            </h1>
+
+            <p class="text-md sm:text-md font-indie-flower-regular text-center sm:text-left leading-relaxed">
+                Hi! I am <strong>Aditya Chandrakar</strong>, a passionate Web Developer dedicated to crafting
+                <span class="text-blue-400">sleek, efficient, and user-friendly web experiences</span>. I specialize in front-end & back-end development, with a strong command over modern technologies.
+            </p>
+
+            <h2 class="text-md font-quicksand mt-8">🚀 My Web Development Journey</h2>
+            <p class="text-md leading-relaxed mt-2">
+                My passion for web development started during my BTech in Computer Science, where I actively participated in technical workshops, hackathons, and real-world projects. From building my first website to developing full-stack applications, I’ve continuously
+                refined my skills to deliver high-performance, scalable solutions.
+            </p>
+
+            <h2 class="text-md font-quicksand mt-8">💼 Internship Experience</h2>
+            <ul class="list-disc ml-5 mt-2 text-md leading-relaxed">
+                <li><strong>Disyms, Bhilai (Feb 2024 - May 2024):</strong> Worked on enhancing web applications, integrating APIs, and improving UI/UX.</li>
+                <li><strong>The Karma Web, Raipur (June 2024 - Oct 2024):</strong> Designed modern interfaces, optimized website performance, and conducted code reviews.</li>
+            </ul>
+
+            <h2 class="text-md font-quicksand mt-8">🛠️ Skills & Technologies</h2>
+            <p class="text-md leading-relaxed mt-2">
+                <strong>Programming:</strong> C, C++, Java, Python, PHP, Node.js
+                <br>
+                <strong>Frameworks:</strong> Laravel, React, Django
+                <br>
+                <strong>Databases:</strong> MySQL, MongoDB
+                <br>
+                <strong>Other:</strong> Git, Responsive Design, Network Security Basics
+            </p>
+
+            <h2 class="text-md font-quicksand mt-8">🏆 Hackathons & Certifications</h2>
+            <ul class="list-disc ml-5 mt-2 text-md leading-relaxed">
+                <li>Pitchtember Fest Hackathon (2023) - Remote</li>
+                <li>Hack Bios Hackathon (2023) - Bhilai, Chhattisgarh</li>
+                <li>HackSpace Hackathon (2023) - Bhilai, Chhattisgarh</li>
+            </ul>
+
+            <h2 class="text-md font-quicksand mt-8">📌 Featured Projects</h2>
+            <ul class="list-disc ml-5 mt-2 text-md leading-relaxed">
+                <li><strong>Mentor:</strong> A coaching center management system with real-time attendance tracking & automated fee management.</li>
+                <li><strong>SNB:</strong> A hospital management system featuring appointment booking, patient records, and staff scheduling.</li>
+            </ul>
+
+            <p class="text-md text-center sm:text-left mt-6">
+                Let’s connect and build something amazing together! 🚀
+            </p>
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
+
+</html>
